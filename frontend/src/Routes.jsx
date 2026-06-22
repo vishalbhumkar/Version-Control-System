@@ -11,6 +11,8 @@ import RepoDetails from "./components/repo/RepoDetails";
 import CreateIssue from "./components/issues/CreateIssue";
 // Auth Context
 import { useAuth } from "./authcontext";
+// Copilot Widget
+import Copilot from "./components/copilot/Copilot";
 
 const ProjectRoutes = () => {
   const { currentUser, setCurrentUser } = useAuth();
@@ -68,7 +70,14 @@ const ProjectRoutes = () => {
     // },
   ]);
 
-  return element;
+  const showCopilot = localStorage.getItem("userId") && !["/auth", "/signup"].includes(window.location.pathname);
+
+  return (
+    <>
+      {element}
+      {showCopilot && <Copilot />}
+    </>
+  );
 };
 
 export default ProjectRoutes;
