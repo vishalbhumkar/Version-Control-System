@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box; /* Prevents padding from adding to width */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background-color: #010409; /* Deep GitHub Dark */
+  border-bottom: 1px solid #30363d;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Left Section */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+.nav-left a {
+  text-decoration: none;
+  color: #f0f6fc;
+}
+.nav-link-group {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.75rem;
+}
+
+.nav-logo {
+  height: 2rem; /* 32px */
+  filter: invert(1); /* Makes the black logo white */
+}
+
+.nav-title {
+  color: #f0f6fc;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Right Section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-icon-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #f0f6fc;
+  border: 1px solid #30363d;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  background-color: #21262d;
+  transition: background 0.2s;
+}
+
+.nav-icon-link:hover {
+  background-color: #30363d;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.profile-img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid #30363d;
+  cursor: pointer;
+}
+
+/* Hover effects */
+.nav-title:hover {
+  color: #4493f8;
+}
+/* Container for the person icon */
+.profile-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem; /* 32px */
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid #30363d;
+  background-color: #21262d;
+  color: #c9d1d9; /* Light grey icon color */
+  transition: all 0.2s ease;
+}
+
+/* The SVG itself */
+.person-icon {
+  width: 1.1rem; /* Slightly smaller than the container */
+  height: 1.1rem;
+}
+
+/* Hover effect to make it feel interactive */
+.profile-icon-container:hover {
+  border-color: #8b949e;
+  background-color: #30363d;
+  color: #f0f6fc; /* Bright white on hover */
+}
+
+/* Update your nav-right to ensure everything is vertically centered */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* per */
+.profile-top-actions {
+  display: flex;
+  align-items: center;
+}
+
+#logout {
+  background-color: #21262d;
+  color: #f0f6fc;
+  border: 1px solid #30363d;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+#logout:hover {
+  background-color: #30363d;
+  border: 1px solid #8b949e;
+}
+
+#logout:active {
+  transform: scale(0.98);
+}
+/* SEARCH CONTAINER */
+.nav-search-container {
+  position: relative;
+  width: 300px;
+}
+
+/* INPUT */
+.nav-search {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background-color: #0d1117;
+  color: white;
+  outline: none;
+}
+
+/* DROPDOWN */
+.search-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 999;
+
+  /* 🔥 animation */
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* ITEM */
+.search-item {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s;
+}
+
+.search-item:hover {
+  background-color: #21262d;
+}
+
+/* TEXT */
+.search-username {
+  font-weight: 600;
+  color: #2f81f7;
+}
+
+.search-email {
+  font-size: 12px;
+  color: #8b949e;
+}
+
+/* EMPTY */
+.no-results {
+  padding: 10px;
+  text-align: center;
+  color: #8b949e;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

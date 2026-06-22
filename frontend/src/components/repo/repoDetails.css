@@ -1,0 +1,296 @@
+.repo-details-page {
+  background: #0d1117;
+  color: #f0f6fc;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.repo-details-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.repo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.repo-badge {
+  border: 1px solid #30363d;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.repo-section {
+  margin-top: 20px;
+}
+
+.repo-section textarea {
+  width: 100%;
+  min-height: 100px;
+  background: #161b22;
+  color: white;
+  border: 1px solid #30363d;
+  padding: 10px;
+}
+
+.repo-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.repo-actions button {
+  padding: 10px 15px;
+  border: none;
+  background: #238636;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.delete-btn {
+  background: #da3633;
+}
+/* Layout */
+.repo-layout {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 20px;
+  padding: 20px;
+  background-color: #0d1117;
+  min-height: 88.5vh;
+  color: white;
+}
+
+/* LEFT */
+.repo-left {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* RIGHT */
+.repo-right {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+/* Issue Card */
+.issue-card {
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.issue-card:hover {
+  border-color: #2f81f7;
+}
+
+/* Header */
+.issue-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Title */
+.issue-title {
+  font-weight: bold;
+}
+
+/* Actions */
+.issue-actions button {
+  margin-left: 5px;
+  background: #21262d;
+  border: none;
+  padding: 5px 8px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.issue-actions button:hover {
+  background: #30363d;
+}
+
+/* Body Animation */
+.issue-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 10px;
+}
+
+.issue-body.show {
+  max-height: 200px;
+  padding: 10px;
+}
+/* ================= LEFT PANEL UPGRADE ================= */
+.repo-left {
+  background: #0d1117;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #30363d;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Header */
+.repo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 10px;
+}
+
+.repo-header h2 {
+  font-size: 24px;
+  color: #2f81f7;
+  font-weight: 600;
+}
+
+/* Badge */
+.repo-header span {
+  border: 1px solid #30363d;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #8b949e;
+}
+
+/* Owner */
+.repo-owner {
+  font-size: 14px;
+  color: #8b949e;
+}
+
+/* Sections */
+.repo-section {
+  background: #161b22;
+  border: 1px solid #30363d;
+  padding: 16px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.repo-section:hover {
+  border-color: #2f81f7;
+  transform: translateY(-2px);
+}
+
+/* Section Title */
+.repo-section h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #f0f6fc;
+}
+
+/* Text */
+.repo-section p {
+  color: #c9d1d9;
+  line-height: 1.5;
+}
+
+/* Content list */
+.repo-section ul {
+  padding-left: 20px;
+}
+
+.repo-section li {
+  margin-bottom: 6px;
+  color: #c9d1d9;
+}
+
+/* Textarea */
+.repo-section textarea {
+  width: 100%;
+  min-height: 120px;
+  background: #0d1117;
+  color: #f0f6fc;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 10px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.repo-section textarea:focus {
+  border-color: #2f81f7;
+  box-shadow: 0 0 0 2px rgba(47, 129, 247, 0.2);
+}
+
+/* Buttons container */
+.repo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.repo-actions button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  background: #21262d;
+  color: #f0f6fc;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+/* Hover */
+.repo-actions button:hover {
+  background: #30363d;
+  border-color: #8b949e;
+  transform: translateY(-1px);
+}
+
+/* Active press */
+.repo-actions button:active {
+  transform: scale(0.96);
+}
+
+/* Delete button */
+.repo-actions .delete-btn {
+  background: #da3633;
+  border: none;
+}
+
+.repo-actions .delete-btn:hover {
+  background: #f85149;
+}
+
+/* Primary action (Update) */
+.repo-actions button:nth-child(2) {
+  background: #238636;
+  border: none;
+}
+
+.repo-actions button:nth-child(2):hover {
+  background: #2ea043;
+}
+
+/* Smooth Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

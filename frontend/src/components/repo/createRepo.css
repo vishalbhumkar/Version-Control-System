@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.repo-page {
+  min-height: 100vh;
+  background-color: #0d1117;
+  color: #f0f6fc;
+  padding: 32px 16px;
+}
+
+.repo-container {
+  max-width: 760px;
+  margin: 0 auto;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.repo-header {
+  margin-bottom: 24px;
+}
+
+.repo-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f0f6fc;
+  margin-bottom: 8px;
+}
+
+.repo-header p {
+  font-size: 15px;
+  color: #8b949e;
+  line-height: 1.6;
+}
+
+.repo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.repo-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.repo-form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f0f6fc;
+}
+
+.repo-form-group input[type="text"],
+.repo-form-group textarea {
+  width: 100%;
+  background-color: #0d1117;
+  color: #f0f6fc;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.repo-form-group input[type="text"]::placeholder,
+.repo-form-group textarea::placeholder {
+  color: #8b949e;
+}
+
+.repo-form-group input[type="text"]:focus,
+.repo-form-group textarea:focus {
+  border-color: #2f81f7;
+  box-shadow: 0 0 0 3px rgba(47, 129, 247, 0.15);
+}
+
+.repo-form-group textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.repo-form-group small {
+  color: #8b949e;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.repo-visibility-group {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  background-color: #0d1117;
+}
+
+.repo-visibility-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #2ea043;
+  cursor: pointer;
+}
+
+.repo-message {
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.error-message {
+  background-color: rgba(248, 81, 73, 0.12);
+  border: 1px solid #f85149;
+  color: #ffb3ad;
+}
+
+.success-message {
+  background-color: rgba(46, 160, 67, 0.12);
+  border: 1px solid #2ea043;
+  color: #aff5b4;
+}
+
+.repo-submit-btn {
+  background-color: #238636;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.repo-submit-btn:hover:not(:disabled) {
+  background-color: #2ea043;
+}
+
+.repo-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 768px) {
+  .repo-page {
+    padding: 20px 12px;
+  }
+
+  .repo-container {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .repo-header h1 {
+    font-size: 24px;
+  }
+
+  .repo-header p {
+    font-size: 14px;
+  }
+
+  .repo-visibility-group {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .repo-submit-btn {
+    width: 100%;
+  }
+}
