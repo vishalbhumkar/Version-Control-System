@@ -73,14 +73,15 @@ const Dashboard = () => {
         return;
       }
 
-      // Filter local recent repositories
+      // Filter local recent repositories to only show public repositories
       const filtered = suggestedRepositories.filter(
         (repo) =>
-          repo.name.toLowerCase().includes(globalSearch.toLowerCase()) ||
-          (repo.description &&
-            repo.description
-              .toLowerCase()
-              .includes(globalSearch.toLowerCase())),
+          !repo.visibility &&
+          (repo.name.toLowerCase().includes(globalSearch.toLowerCase()) ||
+            (repo.description &&
+              repo.description
+                .toLowerCase()
+                .includes(globalSearch.toLowerCase())))
       );
       setFilteredRecentRepos(filtered);
     };
@@ -161,7 +162,7 @@ const Dashboard = () => {
 
           {/* 🔥 SEARCH RESULTS */}
           {globalSearch && (
-            <div className="suggested-section">
+            <div className="suggested-section expanded">
               {filteredRecentRepos.length > 0 ? (
                 filteredRecentRepos.map((repo) => (
                   <div
