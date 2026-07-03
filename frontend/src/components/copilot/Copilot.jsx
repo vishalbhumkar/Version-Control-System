@@ -103,7 +103,7 @@ const Copilot = () => {
     setLoading(true);
     setShowHistory(false);
     try {
-      const response = await axios.get(`44.193.25.58:3001/copilot/thread/${threadId}`);
+      const response = await axios.get(`https://vcs-69so.onrender.com/copilot/thread/${threadId}`);
       setMessages(response.data);
     } catch (err) {
       console.error("Error fetching thread messages:", err);
@@ -117,7 +117,7 @@ const Copilot = () => {
   const deleteThread = async (e, threadId) => {
     e.stopPropagation();
     try {
-      await axios.delete(`44.193.25.58:3001/copilot/thread/${threadId}`);
+      await axios.delete(`https://vcs-69so.onrender.com/copilot/thread/${threadId}`);
       setAllThreads((prev) => prev.filter((t) => t.threadId !== threadId));
       if (threadId === currThreadId) {
         createNewChat();
@@ -139,7 +139,7 @@ const Copilot = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("44.193.25.58:3001/copilot/chat", {
+      const response = await axios.post("https://vcs-69so.onrender.com/copilot/chat", {
         threadId: currThreadId,
         message: userMessage,
       });
