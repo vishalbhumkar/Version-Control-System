@@ -24,7 +24,7 @@ const Navbar = () => {
 
     try {
       const res = await axios.get(
-        `http://localhost:3001/user/name/${value}`
+        `44.193.25.58:3001/user/name/${value}`
       );
 
       setResults(res.data);
