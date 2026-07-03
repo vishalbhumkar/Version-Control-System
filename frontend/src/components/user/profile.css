@@ -107,7 +107,8 @@
 /* perplexity */
 
 .profile-page {
-  min-height: 100vh;
+  flex: 1;
+  overflow-y: auto;
   background-color: #0d1117;
   color: #f0f6fc;
   width: 100%;
