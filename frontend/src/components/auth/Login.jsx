@@ -29,7 +29,7 @@ const Login = () => {
 
     try {
       setLoading(true);
-      const res = await axios.post("44.193.25.58:3001/login", {
+      const res = await axios.post("https://vcs-69so.onrender.com:3001/login", {
         //try 3000
         email: email,
         password: password,
