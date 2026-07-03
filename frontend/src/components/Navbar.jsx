@@ -24,7 +24,7 @@ const Navbar = () => {
 
     try {
       const res = await axios.get(
-        `44.193.25.58:3001/user/name/${value}`
+        `https://vcs-69so.onrender.com/user/name/${value}`
       );
 
       setResults(res.data);
