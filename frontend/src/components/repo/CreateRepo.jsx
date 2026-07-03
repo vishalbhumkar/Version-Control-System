@@ -49,7 +49,7 @@ const CreateRepo = () => {
         ? formData.issues.split(",").map((id) => id.trim())
         : [];
 
-      const response = await fetch("http://localhost:3001/repo/create", {
+      const response = await fetch("44.193.25.58:3001/repo/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
