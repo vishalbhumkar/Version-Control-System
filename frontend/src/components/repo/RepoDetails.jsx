@@ -18,7 +18,7 @@ const RepoDetails = () => {
 
   // ================= REPO =================
   const fetchRepo = async () => {
-    const res = await fetch(`44.193.25.58:3001/repo/${id}`);
+    const res = await fetch(`https://vcs-69so.onrender.com/repo/${id}`);
     const data = await res.json();
     const repoData = Array.isArray(data) ? data[0] : data;
 
@@ -29,7 +29,7 @@ const RepoDetails = () => {
 
   // ================= ISSUES =================
   const fetchIssues = async () => {
-    const res = await fetch(`44.193.25.58:3001/issue/repo/${id}`);
+    const res = await fetch(`https://vcs-69so.onrender.com/issue/repo/${id}`);
     const data = await res.json();
     setIssues(data);
   };
@@ -41,14 +41,14 @@ const RepoDetails = () => {
 
   // ================= ISSUE ACTIONS =================
   const handleDeleteIssue = async (issueId) => {
-    await fetch(`44.193.25.58:3001/issue/delete/${issueId}`, {
+    await fetch(`https://vcs-69so.onrender.com/issue/delete/${issueId}`, {
       method: "DELETE",
     });
     fetchIssues();
   };
 
   const handleToggleStatus = async (issue) => {
-    await fetch(`44.193.25.58:3001/issue/update/${issue._id}`, {
+    await fetch(`https://vcs-69so.onrender.com/issue/update/${issue._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -63,7 +63,7 @@ const RepoDetails = () => {
 
   // ================= REPO ACTIONS =================
   const handleUpdate = async () => {
-    await fetch(`44.193.25.58:3001/repo/update/${id}`, {
+    await fetch(`https://vcs-69so.onrender.com/repo/update/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -77,14 +77,14 @@ const RepoDetails = () => {
   };
 
   const handleDelete = async () => {
-    await fetch(`44.193.25.58:3001/repo/delete/${id}`, {
+    await fetch(`https://vcs-69so.onrender.com/repo/delete/${id}`, {
       method: "DELETE",
     });
     navigate("/");
   };
 
   const handleToggle = async () => {
-    await fetch(`44.193.25.58:3001/repo/toggle/${id}`, {
+    await fetch(`https://vcs-69so.onrender.com/repo/toggle/${id}`, {
       method: "PATCH",
     });
     fetchRepo();
