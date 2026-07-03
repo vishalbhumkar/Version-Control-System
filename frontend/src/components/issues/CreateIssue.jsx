@@ -35,7 +35,7 @@ const CreateIssue = () => {
 
     try {
       const res = await fetch(
-        `44.193.25.58:3001/issue/create/${id}`,
+        `https://vcs-69so.onrender.com/issue/create/${id}`,
         {
           method: "POST",
           headers: {
