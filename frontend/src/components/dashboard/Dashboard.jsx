@@ -29,7 +29,7 @@ const Dashboard = () => {
     const fetchRepositories = async () => {
       try {
         const response = await fetch(
-          `44.193.25.58:3001/repo/user/${userId}`,
+          `https://vcs-69so.onrender.com/repo/user/${userId}`,
         );
         const data = await response.json();
         setRepositories(data.repositories || []);
@@ -41,7 +41,7 @@ const Dashboard = () => {
 
     const fetchSuggestedRepositories = async () => {
       try {
-        const response = await fetch(`44.193.25.58:3001/repo/all`);
+        const response = await fetch(`https://vcs-69so.onrender.com/repo/all`);
         const data = await response.json();
         const publicRepos = (data || []).filter((repo) => !repo.visibility);
         setSuggestedRepositories(publicRepos);
