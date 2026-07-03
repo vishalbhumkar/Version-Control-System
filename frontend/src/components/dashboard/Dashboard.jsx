@@ -29,7 +29,7 @@ const Dashboard = () => {
     const fetchRepositories = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/repo/user/${userId}`,
+          `44.193.25.58:3001/repo/user/${userId}`,
         );
         const data = await response.json();
         setRepositories(data.repositories || []);
@@ -41,7 +41,7 @@ const Dashboard = () => {
 
     const fetchSuggestedRepositories = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/repo/all`);
+        const response = await fetch(`44.193.25.58:3001/repo/all`);
         const data = await response.json();
         const publicRepos = (data || []).filter((repo) => !repo.visibility);
         setSuggestedRepositories(publicRepos);
