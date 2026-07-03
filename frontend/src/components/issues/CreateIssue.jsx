@@ -35,7 +35,7 @@ const CreateIssue = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:3001/issue/create/${id}`,
+        `44.193.25.58:3001/issue/create/${id}`,
         {
           method: "POST",
           headers: {
