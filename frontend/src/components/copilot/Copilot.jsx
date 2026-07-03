@@ -68,7 +68,7 @@ const Copilot = () => {
   // Fetch all threads
   const fetchAllThreads = async () => {
     try {
-      const response = await axios.get("44.193.25.58:3001/copilot/thread");
+      const response = await axios.get("https://vcs-69so.onrender.com/copilot/thread");
       setAllThreads(response.data);
     } catch (err) {
       console.error("Error fetching threads:", err);
